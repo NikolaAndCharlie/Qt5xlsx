@@ -169,7 +169,7 @@ int main()
 	report->WriteCustomNumFormatCell(xlsx, 13, 20.5627, "#.###");
 	report->WriteCustomNumFormatCell(xlsx, 14, 4.8, "#.00");
 	report->WriteCustomNumFormatCell(xlsx, 15, 1.23, "0.00 \"RMB\"");
-	report->WriteCustomNumFormatCell(xlsx, 16, 60, "[Red][<=100];[Green][>100]");
+	report->WriteCustomNumFormatCell(xlsx, 16, 60, QObject::tr("[Red][<=%1];[Green][>100]").arg(100));
 
 	xlsx.addSheet("Merage");
 	Format centerAlign;

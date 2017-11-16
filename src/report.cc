@@ -46,7 +46,8 @@ void Report::WriteSolidFillCell(QXlsx::Document& xlsx, const QString& cell,const
 {
 	Format format;
 	format.setPatternBackgroundColor(color);
-	xlsx.write(cell, QVariant(), format);
+	format.setFontBold(true);
+	xlsx.write(cell, 2, format);
 }
 
 void Report::WritePatternFillCell(QXlsx::Document& xlsx, const QString& cell, QXlsx::Format::FillPattern pattern, const QColor& color)
